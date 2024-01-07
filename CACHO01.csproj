@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{479E3BAF-276B-429D-941F-C1CDBE9358A1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CACHO01</RootNamespace>
+    <AssemblyName>CACHO01</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Estatica.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultaPuntaje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultaPuntaje.Designer.cs">
+      <DependentUpon>frmConsultaPuntaje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmJuego.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJuego.Designer.cs">
+      <DependentUpon>frmJuego.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPuntuaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPuntuaciones.Designer.cs">
+      <DependentUpon>frmPuntuaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegistroJugador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistroJugador.Designer.cs">
+      <DependentUpon>frmRegistroJugador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReglas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReglas.Designer.cs">
+      <DependentUpon>frmReglas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListaDados.cs" />
+    <Compile Include="listaDobleCircularReglas.cs" />
+    <Compile Include="Lista_Jugadores.cs" />
+    <Compile Include="NodoDado.cs" />
+    <Compile Include="NodoReglas.cs" />
+    <Compile Include="Nodo_Jugador.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultaPuntaje.resx">
+      <DependentUpon>frmConsultaPuntaje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJuego.resx">
+      <DependentUpon>frmJuego.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPuntuaciones.resx">
+      <DependentUpon>frmPuntuaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistroJugador.resx">
+      <DependentUpon>frmRegistroJugador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReglas.resx">
+      <DependentUpon>frmReglas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnIniciar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diablada-bolivia-mask-cut-out-by-Vexels.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnReglas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnSalir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TITULO_EL_JUEGO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TITULO_CACHO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnTiqueo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnIniciarJuego1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnLanzar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnVoltear2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnTerminarTurno4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnJugada.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dado05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dado05ne.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dado06.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dado06ne.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dado01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dado01ne.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dado02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dado02ne.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dado03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dado03ne.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dado04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dado04ne.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TricaCacho.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgCoronita.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgFinalizacion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgPosociones.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnTerminar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnIzquierda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnDerecha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diablada-bolivia-cut-out-by-Vexels.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnConsultaPuntaje.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnPuntajeConsulta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de pantalla_20221201_183139.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de pantalla_20221201_183216.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
